@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #FAEEBA; /* Vanilla background */
+  color: #545A57; /* Neutral gray for text */
+}
+
+/* NAVBAR */
+nav {
+  background: #007C40; /* Dark spring green */
+  padding: 5px 0;      /* mas manipis na height */
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  display: inline-block;
+  color: white;
+  margin: 0 12px;      
+  padding: 5px 0;      
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  font-size: 0.95rem;  
+  transition: color 0.3s;
+}
+
+/* Hover underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFEC6A; /* maize underline */
+  transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {   /* add .active class for current page */
+  width: 100%;
+}
+
+nav a:hover {
+  color: #FFEC6A;
+}
+
+/* LANDING PAGE */
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #FAEEBA; /* vanilla background */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+  font-size: 3rem;
+  color: #007C40; /* main green */
+  margin-bottom: 10px;
+  animation: slideUp 1s ease forwards;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #545A57; /* gray for softer text */
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.6s forwards;
+}
+
+.big-btn {
+  padding: 15px;
+  background: white;
+  border: 2px solid #007C40;
+  border-radius: 10px;
+  color: #007C40;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.big-btn:hover {
+  background: #007C40;
+  color: white;
+}
+
+/* CONTAINERS + CARDS */
+.container {
+  max-width: 700px;
+  margin: -13px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 25px;
+  margin-top: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007C40;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #004923; /* darker green */
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table thead {
+  background: #007C40;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Chart colors hint */
+.chart-bar {
+  background-color: #FFEC6A; /* maize accent */
+}
+
+/* ANIMATIONS (unchanged) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

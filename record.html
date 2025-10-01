@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Record Waste - DenTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="view.html">View Records</a>
+  <a href="summary.html">Summary</a>
+  <a href="record.html" class="active">Record Waste</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+    <h2>Record Dental Waste</h2>
+    <form id="wasteForm">
+      <label>Waste Type:</label>
+      <select id="type" required onchange="checkOtherOption(this)">
+      <option value="Amalgam">Amalgam</option>
+      <option value="Sharps">Sharps</option>
+      <option value="Chemical Waste">Chemical Waste</option>
+      <option value="General Waste">General Waste</option>
+      <option value="Other">Other (specify)</option>
+      </select>
+
+<!-- Hidden input for Other option -->
+<input type="text" id="otherType" placeholder="Enter waste type" style="display:none; margin-top:10px;">
+      <label>Amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount" required>
+      <input type="text" id="unit" placeholder="Unit (kg/pcs)" required>
+
+      <label>Date:</label>
+      <input type="date" id="date" required>
+
+      <button type="submit" class="btn">Save</button>
+    </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

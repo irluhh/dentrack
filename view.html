@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>View Records - DenTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="record.html">Record Waste</a>
+    <a href="summary.html">Summary</a>
+  </nav>
+
+  <div class="container">
+  <h2>View Records</h2>
+  <button onclick="resetRecords()" class="btn">Reset Records</button>
+  
+  <div class="table-container">
+  <table id="recordsTable">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
